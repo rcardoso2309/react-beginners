@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React para Iniciantes - 204</title>
+
+  <!-- Carrega o React, React Dom e Babel -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="./main.js"></script>
+
+
+  "scripts": {
+  "start": "esbuild --bundle src/main.jsx --outfile=main.js --servedir=./ --watch",
+  "build": "esbuild --bundle src/main.jsx --outfile=main.js"
+  },
+  import ReactDOM from 'react-dom/client';
+  import React from 'react';
+  import App from './App';
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+  <App />);
+  Copiar
+
+
+  <script>
+    new EventSource('/esbuild').addEventListener('change', () =>
+      location.reload(),
+    );
+  </script>
+
+</body>
+
+</html>
